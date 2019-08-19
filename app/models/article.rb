@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
   attr_accessor :long_title
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   before_validation :convert_title
 
